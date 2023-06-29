@@ -1,0 +1,26 @@
+@import './base.less';
+@import './fade.less';
+@import './scale.less';
+@import './slide.less';
+@import './scroll.less';
+@import './zoom.less';
+
+.collapse-transition {
+    transition: 0.2s height ease-in-out, 0.2s padding-top ease-in-out, 0.2s padding-bottom ease-in-out;
+}
+
+/* breadcrumb transition */
+.breadcrumb-enter-active,
+.breadcrumb-leave-active {
+    transition: all 0.5s ease;
+}
+
+.breadcrumb-leave-active {
+    position: absolute;
+}
+
+.breadcrumb-enter-from,
+.breadcrumb-leave-to {
+    opacity: 0;
+    transform: translateX(30px);
+}

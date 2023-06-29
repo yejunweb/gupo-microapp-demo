@@ -1,0 +1,32 @@
+# regex --- 匹配正则表达式模式：^ {pattern} $
+# lowercase --- 每个字母必须小写 忽略非字母
+# camelcase --- 字符串必须为camelCase 只允许使用字母和数字
+# pascalcase --- 字符串必须为Pascalcase 只允许使用字母和数字
+# snakecase --- 字符串必须为snake_case 只允许使用小写字母，数字和_
+# kebabcase --- 字符串必须为kebab-case 仅小写字母，数字和-允许
+# pointcase --- 字符串必须为“小写” 仅小写字母，数字和.允许的
+ls:
+    src/*:
+        .js: kebab-case | PascalCase | camelCase
+        .jsx: kebab-case | PascalCase
+        .vue: PascalCase | regex:^index
+        .ts: camelCase | PascalCase
+        .tsx: kebab-case | PascalCase
+        .d.ts: kebab-case | camelCase
+        .mock.ts: kebab-case | camelCase
+        .data.ts: kebab-case | camelCase
+        .test-d.ts: kebab-case
+        .less: kebab-case | camelCase | pointcase
+        .spec.ts: camelCase | PascalCase
+
+ignore:
+    - node_modules
+    - .git
+    - .circleci
+    - .github
+    - .vscode
+    - .idea
+    - dist
+    - .local
+    - .husky
+    - src/locales/lang

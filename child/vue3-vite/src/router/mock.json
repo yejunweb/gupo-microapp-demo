@@ -1,0 +1,14 @@
+{
+    "router": [
+        {
+            "path": "/Index",
+            "meta": {
+                "icon": "overview",
+                "title": "首页"
+            },
+            "children": []
+        }
+    ],
+    "button": [],
+    "otherPage": []
+}

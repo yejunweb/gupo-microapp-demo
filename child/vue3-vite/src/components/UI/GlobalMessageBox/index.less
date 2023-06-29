@@ -1,0 +1,36 @@
+.gupo-message-box {
+    .ant-modal-confirm .ant-modal-body {
+        padding: @space4;
+    }
+
+    .ant-modal-confirm-content {
+        margin: 0 !important;
+    }
+
+    .ant-modal-confirm-btns {
+        display: none;
+    }
+
+    &__content {
+        > p {
+            padding: @space4 0 @space6;
+        }
+
+        .content-operate {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    &__title {
+        position: relative;
+
+        .title-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: var(--font-size-content);
+            cursor: pointer;
+        }
+    }
+}

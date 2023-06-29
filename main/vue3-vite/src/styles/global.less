@@ -1,0 +1,135 @@
+@import url('reset.css');
+@import url('transition');
+
+#app {
+    min-width: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
+    font-size: var(--font-size-content);
+    color: #333;
+    background-color: #f6f7f8;
+
+    [class*='-avatar'] {
+        > img {
+            width: 100%;
+        }
+    }
+}
+
+// common-class
+.box-shadow {
+    box-shadow: 0 0 5px rgba(148, 161, 196, 0.3);
+}
+
+// 滚动条样式修改
+.global-scrollbar {
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+        scrollbar-arrow-color: #c1c1c1;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #c1c1c1;
+        border-radius: 3px;
+        box-shadow: inset 0 0 5px #c1c1c1;
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 3px;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0);
+    }
+}
+
+// antd
+.ant-btn + .ant-btn {
+    margin-left: @space2;
+}
+
+.ant-input + .ant-input {
+    margin-left: 40px;
+}
+
+.ant-pagination-item-active {
+    a {
+        color: #fff !important;
+        background-color: var(--color-master);
+    }
+}
+
+.ant-table-tbody {
+    > tr:hover:not(.ant-table-expanded-row) > td,
+    .ant-table-row-hover {
+        background: var(--color-master-light-4);
+    }
+}
+
+.main .container {
+    padding: @space6;
+}
+
+.container-background {
+    background: #fff;
+}
+
+// status
+.status {
+    display: flex;
+    align-items: center;
+
+    &::before {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        margin-right: @space2;
+        background: #bfbfbf;
+        border-radius: 100%;
+        content: '';
+    }
+
+    &.primary::before {
+        background: var(--color-master);
+    }
+
+    &.success::before {
+        background: var(--color-success);
+    }
+
+    &.error::before {
+        background: var(--color-error);
+    }
+}
+
+// pointer
+.pointer {
+    color: var(--color-master);
+    cursor: pointer;
+
+    &.success {
+        color: var(--color-success);
+    }
+
+    &.error {
+        color: var(--color-error);
+    }
+}
+
+.operate {
+    display: flex;
+    align-items: center;
+
+    .pointer + .pointer {
+        display: flex;
+        align-items: center;
+
+        &::before {
+            display: inline-block;
+            width: 1px;
+            height: 14px;
+            margin: 0 8px;
+            background: #e9e9e9;
+            content: '';
+        }
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "router": [
+        {
+            "path": "/Index",
+            "meta": {
+                "icon": "overview",
+                "title": "首页"
+            },
+            "children": []
+        },
+        {
+            "path": "/ChildVue3Vite",
+            "meta": {
+                "icon": "data-entry",
+                "title": "ChildVue3Vite"
+            },
+            "children": [
+                {
+                    "path": "/ChildVue3ViteBase",
+                    "meta": {
+                        "icon": "",
+                        "title": "父子应用传参",
+                        "microApp": true,
+                        "component": "/ChildVue3Vite"
+                    },
+                    "children": []
+                },
+                {
+                    "path": "/ChildVue3ViteRoute",
+                    "meta": {
+                        "icon": "",
+                        "title": "子应用路由跳转",
+                        "microApp": true,
+                        "component": "/ChildVue3Vite"
+                    },
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "button": [],
+    "otherPage": [
+        {
+            "path": "/ChildVue3ViteRoute/Details",
+            "meta": {
+                "activeMenu": "/ChildVue3ViteRoute",
+                "showGoBack": true,
+                "title": "详情",
+                "microApp": true,
+                "component": "/ChildVue3Vite"
+            }
+        }
+    ]
+}

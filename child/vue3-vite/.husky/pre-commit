@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+. "$(dirname "$0")/common.sh"
+
+npm run pre-commit:lint-staged # 一些操作包括 eslint、stylelint 等等 lint-staged.config.js

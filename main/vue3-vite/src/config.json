@@ -1,0 +1,14 @@
+{
+    "colorMaster": "#1890ff",
+    "fontSizeBase": "14px",
+    "layoutType": "left",
+    "siderType": "whiteSider",
+    "animateType": "fade-slide",
+    "showBreadcrumb": true,
+    "showReloadView": true,
+    "showSwitchOrg": true,
+    "showMenu": true,
+    "showHeader": true,
+    "showSetting": true,
+    "showFooter": true
+}

@@ -1,0 +1,64 @@
+.ant-layout.xiaoshan {
+    .header-left {
+        &__logo {
+            display: none;
+        }
+
+        &__text {
+            display: flex;
+            margin-right: var(--font-size-base);
+            font-size: 20px;
+            font-weight: bold;
+            border-left: none;
+            align-items: center;
+
+            &::before {
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                margin-right: 14px;
+                background: url('../../assets/images/logo_xiaoshan.png') center center no-repeat;
+                background-size: cover;
+                content: '';
+            }
+        }
+    }
+
+    .ant-layout-sider.layout-sider {
+        background-color: #3b4164;
+
+        .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+            background-color: var(--color-master);
+        }
+
+        .ant-layout-sider-children {
+            .switch-org,
+            .switch-org__change {
+                color: #fff;
+            }
+
+            .ant-menu-item,
+            .ant-menu-submenu-title {
+                color: #fff;
+                background-color: #3b4164;
+
+                .ant-menu-submenu-arrow {
+                    color: #fff;
+                }
+            }
+
+            .ant-menu-submenu {
+                background-color: #3b4164;
+            }
+        }
+
+        .ant-layout-sider-trigger {
+            background-color: #464b6d;
+
+            .trigger {
+                color: #868baa;
+                border-top: none;
+            }
+        }
+    }
+}
